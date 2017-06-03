@@ -26,6 +26,3 @@ test:
 
 production:
   <<: *default
-  database: redrum_production
-  username: redrum
-  password: <%= ENV['REDRUM_DATABASE_PASSWORD'] %>
