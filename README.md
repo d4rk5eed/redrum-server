@@ -13,6 +13,7 @@
    rbenv install 2.3.3
    rbenv global 2.3.3
    ```
+   Additional ino on ruby install https://gorails.com/setup/osx/10.12-sierra
 5. Check ruby version: `ruby -v`, should be 2.3.3
 6. Install postgres `brew install postgresql`
 7. To have launchd start postgresql at login:
@@ -27,3 +28,9 @@
 13. Start server with `bundle exec rails s`
 14. Follow http://localhost:3000 for landing pages
 15. Follow http://localhost:3000/shop for spree frontend
+
+## HOWTO Customize Spree
+1. To customize html templates refer to files in app/views/spree/
+2. To customize scss refer to vendor/assets/stylesheets/spree/frontend/frontend_bootstrap.css.scss . Additional: https://github.com/spree/spree/tree/master/frontend ,
+Full list of scss variables : https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
+3. To customize spree coffee script refer to vendor/assets/javascripts/spree/frontend
