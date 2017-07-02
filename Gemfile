@@ -33,6 +33,10 @@ gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'spree', '~> 3.3.0.rc1'
+gem 'spree_auth_devise', '~> 3.3.0.rc1'
+gem 'spree_gateway', '~> 3.3.0.rc1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
