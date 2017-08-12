@@ -8,7 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
-gem 'pg'
+gem 'pg', '~> 0.18.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -36,6 +36,7 @@ gem 'jquery-rails'
 gem 'spree', '~> 3.3.0.rc1'
 gem 'spree_auth_devise', '~> 3.3.0.rc1'
 gem 'spree_gateway', github: 'Kalilo/spree_gateway', branch: 'patch-1'
+gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
