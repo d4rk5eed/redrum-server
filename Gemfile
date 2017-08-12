@@ -37,6 +37,8 @@ gem 'spree', '~> 3.3.0.rc1'
 gem 'spree_auth_devise', '~> 3.3.0.rc1'
 gem 'spree_gateway', github: 'Kalilo/spree_gateway', branch: 'patch-1'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
+gem 'spree_editor', github: 'spree-contrib/spree_editor'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
