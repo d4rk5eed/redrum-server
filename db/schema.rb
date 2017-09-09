@@ -1162,7 +1162,7 @@ ActiveRecord::Schema.define(version: 20170906231243) do
 
   create_table "spree_wallet_payment_sources", id: :serial, force: :cascade do |t|
     t.integer "user_id", null: false
-    t.string "payment_source_type"
+    t.string "payment_source_type", null: false
     t.integer "payment_source_id", null: false
     t.boolean "default", default: false, null: false
     t.datetime "created_at", null: false
