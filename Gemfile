@@ -38,6 +38,9 @@ gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
 gem 'solidus_editor', github: 'solidusio-contrib/solidus_editor', branch: 'master'
 gem 'tinymce-rails-langs'
 
+gem 'activeadmin'
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

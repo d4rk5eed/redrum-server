@@ -1,0 +1,43 @@
+<header>
+    <div class="header__container container">
+        <div class="header__content">
+            <div class="header__left-side">
+                <div class="header__brand"></div>
+                <ul class="header__list"><a class="header__link" href="">
+                    <li class="header__item">Новости</li></a><a class="header__link" href="">
+                        <li class="header__item">Блоги</li></a><a class="header__link" href="">
+                            <li class="header__item">Магазин</li></a><a class="header__link" href="">
+                                <li class="header__item">Рубрики</li></a><a class="header__link" href="">
+                                    <li class="header__item">О нас</li></a></ul>
+            </div>
+            <div class="header__right-side">
+                <div class="header__burger ion-navicon"></div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="all-posts">
+        <div class="all-posts__container container">
+            <div class="all-posts__items-row">
+                <% @news.each do |news| %>
+                    <div class="all-posts__item"><%= link_to image_tag("popular-posts/s-01.jpg", class: "all-posts__image"), news %>
+                        <div class="all-posts__info">
+                            <div class="all-posts__title"><%= link_to news.title, news %></div>
+                            <div class="all-posts__announcement"><%= news.announcement %></div>
+
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="team">
+        <div class="team__container container">
+            <div class="team__list">
+                <div class="team__item"></div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer></footer>
