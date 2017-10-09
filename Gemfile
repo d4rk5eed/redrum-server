@@ -41,6 +41,10 @@ gem 'tinymce-rails-langs'
 gem 'activeadmin'
 gem 'devise'
 
+gem 'carrierwave', '~> 1.0'
+gem 'fog'
+gem 'active_admin_editor'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

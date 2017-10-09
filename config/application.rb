@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module RedrumServer
   class Application < Rails::Application
-    
+
     config.to_prepare do
       # Load application's model / class decorators
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
@@ -19,10 +19,22 @@ module RedrumServer
       Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/*.rb")) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
+
+      # Load application's uploaders
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/uploaders/*.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
     end
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
+
+    config.before_configuration do
+      env_file = File.join(Rails.root, 'config', 'local_env.yml')
+      YAML.load(File.open(env_file)).each do |key, value|
+        ENV[key.to_s] = value
+      end if File.exists?(env_file)
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

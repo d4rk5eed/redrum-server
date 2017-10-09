@@ -19,7 +19,7 @@
 <main>
     <div class="all-posts__items-row">
         <div class="all-posts__info">
-            <%= image_tag("popular-posts/s-01.jpg", class: "all-posts__image") %>
+            <%= image_tag(@news.image.url, class: "all-posts__image") %>
             <div class="all-posts__title"><%= @news.title %></div>
             <div class="all-posts__announcement"><%= @news.announcement %></div>
             <div class="all-posts__body"><%= @news.body %></div>
