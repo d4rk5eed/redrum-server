@@ -43,7 +43,7 @@ gem 'devise'
 
 gem 'carrierwave', '~> 1.0'
 gem 'fog'
-gem 'active_admin_editor'
+gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -8,7 +8,7 @@ ActiveAdmin.register News do
       f.input :title
       f.input :image, :as => :file
       f.input :announcement
-      f.input :body
+      f.input :body, as: :html_editor
     end
     f.actions
   end
