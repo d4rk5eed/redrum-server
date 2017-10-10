@@ -32,18 +32,18 @@ gem 'jquery-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'solidus'
-gem 'solidus_auth_devise'
-gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
-gem 'solidus_editor', github: 'solidusio-contrib/solidus_editor', branch: 'master'
-gem 'tinymce-rails-langs'
+# gem 'solidus'
+# gem 'solidus_auth_devise'
+# gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
+# gem 'solidus_editor', github: 'solidusio-contrib/solidus_editor', branch: 'master'
+# gem 'tinymce-rails-langs'
 
-gem 'activeadmin'
 gem 'devise'
+gem 'activeadmin', github: 'activeadmin/activeadmin', branch: 'master'
 
 gem 'carrierwave', '~> 1.0'
 gem 'fog'
-gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
+#gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
