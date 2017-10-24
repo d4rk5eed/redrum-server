@@ -43,6 +43,8 @@ gem 'activeadmin', github: 'activeadmin/activeadmin', branch: 'master'
 
 gem 'carrierwave', '~> 1.0'
 gem 'fog'
+gem 'rmagick'
+gem 'mini_magick'
 gem 'bootstrap', '~> 4.0.0.beta'
 
 #gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'

@@ -23,3 +23,8 @@ a:hover {
 h3 {
     font-size: inherit;
 }
+
+.fixed-height.card-block {
+    overflow: hidden;
+    height: 15em;
+}

@@ -20,50 +20,67 @@
     <div class="bs-docs-section">
 
         <div class="row" style="padding-bottom: 2em">
-            <div class="col-lg-4">
-                <div class="bs-component">
-                    <div class="card">
-                        <h3 class="card-header"><a href="#" class="card-link">Жанровый синтез в хорроре</a></h3>
-                        <img src="https://uproxx.files.wordpress.com/2013/10/hellraiser1.jpg?quality=100&w=650" class="img-fluid" alt="Card image">
-                        <div class="card-block">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <% @news.each do |item| %>
+                <div class="col-lg-4">
+                    <div class="bs-component">
+                        <div class="card">
+                            <h3 class="card-header"><a href="#" class="card-link"><%= item.title %></a></h3>
+                            <%= image_tag(item.image.thumb.url, class: 'img-fluid', alt: 'Card image') %>
+                            <div class="card-block fixed-height">
+                                <p class="card-text"><%= item.announcement %></p>
+                            </div>
+                            <div class="card-footer text-muted text-xs-center">
+                                <%= distance_of_time_in_words(Time.now, item.created_at) %> назад
+                            </div>
                         </div>
-                        <div class="card-footer text-muted text-xs-center">
-                            один день назад
-                        </div>
-                    </div>
-                    <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
-            </div>
+                        <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+                </div>
+            <% end %>
+            <!--
+                 <div class="col-lg-4">
+                 <div class="bs-component">
+                 <div class="card">
+                 <h3 class="card-header"><a href="#" class="card-link">Жанровый синтез в хорроре</a></h3>
+                 <img src="https://uproxx.files.wordpress.com/2013/10/hellraiser1.jpg?quality=100&w=650" class="img-fluid" alt="Card image">
+                 <div class="card-block">
+                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                 </div>
+                 <div class="card-footer text-muted text-xs-center">
+                 один день назад
+                 </div>
+                 </div>
+                 <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+                 </div>
 
-            <div class="col-lg-4">
-                <div class="bs-component">
-                    <div class="card">
-                        <h3 class="card-header"><a href="#" class="card-link">Вниманию читателей и всем сочувствующим! </a></h3>
-                        <img src="https://uproxx.files.wordpress.com/2013/10/hellraiser1.jpg?quality=100&w=650" class="img-fluid" alt="Card image">
-                        <div class="card-block">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <div class="card-footer text-muted text-xs-center">
-                            2 дня назад
-                        </div>
-                    </div>
-                    <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
-            </div>
+                 <div class="col-lg-4">
+                 <div class="bs-component">
+                 <div class="card">
+                 <h3 class="card-header"><a href="#" class="card-link">Вниманию читателей и всем сочувствующим! </a></h3>
+                 <img src="https://uproxx.files.wordpress.com/2013/10/hellraiser1.jpg?quality=100&w=650" class="img-fluid" alt="Card image">
+                 <div class="card-block">
+                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                 </div>
+                 <div class="card-footer text-muted text-xs-center">
+                 2 дня назад
+                 </div>
+                 </div>
+                 <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+                 </div>
 
-            <div class="col-lg-4">
-                <div class="bs-component">
-                    <div class="card">
-                        <h3 class="card-header"><a href="#" class="card-link">Ранимый Ричард Бриттен</a></h3>
-                        <img src="https://uproxx.files.wordpress.com/2013/10/hellraiser1.jpg?quality=100&w=650" class="img-fluid" alt="Card image">
-                        <div class="card-block">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <div class="card-footer text-muted text-xs-center">
-                            4 дня назад
-                        </div>
-                    </div>
-                    <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
-            </div>
+                 <div class="col-lg-4">
+                 <div class="bs-component">
+                 <div class="card">
+                 <h3 class="card-header"><a href="#" class="card-link">Ранимый Ричард Бриттен</a></h3>
+                 <img src="https://uproxx.files.wordpress.com/2013/10/hellraiser1.jpg?quality=100&w=650" class="img-fluid" alt="Card image">
+                 <div class="card-block">
+                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                 </div>
+                 <div class="card-footer text-muted text-xs-center">
+                 4 дня назад
+                 </div>
+                 </div>
+                 <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+                 </div> -->
         </div>
 
 
