@@ -24,7 +24,7 @@
                 <div class="col-lg-4">
                     <div class="bs-component">
                         <div class="card">
-                            <h3 class="card-header"><a href="#" class="card-link"><%= item.title %></a></h3>
+                            <h3 class="card-header"><a href="<%= news_path(item) %>" class="card-link"><%= item.title %></a></h3>
                             <%= image_tag(item.image.thumb.url, class: 'img-fluid', alt: 'Card image') %>
                             <div class="card-block fixed-height">
                                 <p class="card-text"><%= item.announcement %></p>
