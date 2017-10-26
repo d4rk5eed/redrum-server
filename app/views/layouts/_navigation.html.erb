@@ -4,21 +4,21 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-brand"> <img src="../assets/logotype/redrum-143.png"></div>
+        <div class="navbar-brand"> <%= inline_svg('logotype/logotype.svg', aria: true) %></div>
 
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto navbar-right">
                 <%# add navigation links to this file %>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Новое</a>
+                    <a class="nav-link" href="<%= welcome_index_path() %>">Новое</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">О нас</a>
+                    <a class="nav-link" href="<%= welcome_index_path(anchor: 'about') %> ">О нас</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#feedback">Напишите нам</a>
+                    <a class="nav-link" href="<%= welcome_index_path(anchor: 'feedback') %> ">Напишите нам</a>
                 </li>
             </ul>
         </div>

@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="bs-component">
-                    <div class="jumbotron">
+                    <div class="jumbotron" style="background-image: url('<%= image_path('slider/s-02.jpg') %>')">
                         <h1 class="display-3">Страшная история на ночь Чунька Колода</h1>
                         <p>Рассказ "Чунька-колода" Марии Артемьевой из авторского сборника "Темная сторона российской провинции". Читает Руслан Покровский.</p>
                         <p><a class="btn btn-primary btn-lg" href="https://www.youtube.com/watch?v=ml_JuofnURw">Слушать</a></p>
@@ -24,8 +24,8 @@
                 <div class="col-lg-4">
                     <div class="bs-component">
                         <div class="card">
-                            <h3 class="card-header"><a href="<%= news_path(item) %>" class="card-link"><%= item.title %></a></h3>
                             <%= image_tag(item.image.thumb.url, class: 'img-fluid', alt: 'Card image') %>
+                            <h3 class="card-header"><a href="<%= news_path(item) %>" class="card-link"><%= item.title %></a></h3>
                             <div class="card-block fixed-height">
                                 <p class="card-text"><%= item.announcement %></p>
                             </div>
