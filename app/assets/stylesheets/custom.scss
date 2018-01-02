@@ -30,3 +30,16 @@ h3 {
     overflow: hidden;
     height: 15em;
 }
+
+.rr_background {	
+    background-image: image-url('backgrounds/mystery-forest.jpg');
+    background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+
+}
+
+main > .container {
+    background-color: black;
+    padding-top: 16px;
+}
