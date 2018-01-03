@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  format: MyString
+  volume: MyString
+  type: 
+  genre: MyText
+  cover: MyString
+  publisher: MyString
+  printing: MyString
+  circulation: MyString
+  price: 1.5
+  additional: MyText
+
+two:
+  format: MyString
+  volume: MyString
+  type: 
+  genre: MyText
+  cover: MyString
+  publisher: MyString
+  printing: MyString
+  circulation: MyString
+  price: 1.5
+  additional: MyText

@@ -1,0 +1,67 @@
+<%= form_with(model: paper, local: true) do |form| %>
+  <% if paper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paper.errors.count, "error") %> prohibited this paper from being saved:</h2>
+
+      <ul>
+      <% paper.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :format %>
+    <%= form.text_field :format, id: :paper_format %>
+  </div>
+
+  <div class="field">
+    <%= form.label :volume %>
+    <%= form.text_field :volume, id: :paper_volume %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type, id: :paper_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :genre %>
+    <%= form.text_area :genre, id: :paper_genre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cover %>
+    <%= form.text_field :cover, id: :paper_cover %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publisher %>
+    <%= form.text_field :publisher, id: :paper_publisher %>
+  </div>
+
+  <div class="field">
+    <%= form.label :printing %>
+    <%= form.text_field :printing, id: :paper_printing %>
+  </div>
+
+  <div class="field">
+    <%= form.label :circulation %>
+    <%= form.text_field :circulation, id: :paper_circulation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :paper_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :additional %>
+    <%= form.text_area :additional, id: :paper_additional %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -31,7 +31,7 @@ h3 {
     height: 15em;
 }
 
-.rr_background {	
+.rr_background {
     background-image: image-url('backgrounds/metal-wall.jpg');
     background-size: cover;
     background-repeat:   no-repeat;
@@ -39,6 +39,28 @@ h3 {
 
 }
 
+.rr-paper {
+    dl {
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0
+    }
+    dt {
+        float: left;
+        width: 30%;
+        /* adjust the width; make sure the total of both is 100% */
+        padding: 0;
+        margin: 0
+    }
+    dd {
+        float: left;
+        width: 70%;
+        /* adjust the width; make sure the total of both is 100% */
+        padding: 0;
+        margin: 0
+    }
+}
 main > .container {
     background-color: black;
     padding-top: 16px;
