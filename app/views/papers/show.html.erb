@@ -4,39 +4,17 @@
         <div class="col-lg-8">
             <!-- Title -->
             <h2 class="mt-4"><%= @paper.title %></h1>
-            <!-- Date/Time -->
-            <p><%= @paper.created_at %></p>
+                <!-- Date/Time -->
+                <p>
+                    <%= @paper.created_at.in_time_zone('Moscow').strftime('%H:%M:%S %d/%m/%Y') %>
+                </p>
         </div>
     </div>
 
     <div class="row">
         <div class="col-lg-4">
             <%= image_tag(@paper.image.url, class: 'img-fluid rounded', alt: 'Card image') %>
-            <%= @paper.content.html_safe %>
-
-        </div>
-        <!-- Post Content Column -->
-        <div class="col-lg-5">
-
-
-            <!-- Author -->
-            <p class="lead">
-
-                <%= @paper.author %>
-            </p>
-
-            <hr>
-
-            <hr>
-
-            <!-- Preview Image -->
-
-            <hr>
-
-            <!-- Post Content -->
-            <p class="lead"><%= @paper.announcement %></p>
-
-            <!-- Format Content -->
+            <!-- Exit Data -->
             <dl>
                 <dt>Формат:</dt><dd><%= @paper.format %></dd>
                 <dt>Объем:</dt><dd><%= @paper.volume %></dd>
@@ -46,12 +24,61 @@
                 <dt>Издательство:</dt><dd><%= @paper.publisher %></dd>
                 <dt>Типография:</dt><dd><%= @paper.printing %></dd>
                 <dt>Тираж:</dt><dd><%= @paper.circulation %></dd>
-                <dt>Дополнительно:</dt><dd><%= @paper.additional %></dd>
-                <dt>Цена:</dt><dd><%= @paper.price %></dd>
-
             </dl>
-            <hr>
 
+
+        </div>
+        <!-- Post Content Column -->
+        <div class="col-lg-5">
+
+
+            <!-- Author -->
+            <% if @paper.author %>
+                <p class="lead">
+                    <%= @paper.author %>
+                </p>
+            <% end %>
+
+            <!-- Post Content -->
+            <p class="lead"><%= @paper.announcement %></p>
+
+            <hr>
+            <%= @paper.content.html_safe %>
+            <!-- PRICE ITEM -->
+            <% if @paper.price &&  @paper.price > 0 %>
+                <div class="panel price panel-blue">
+                    <div class="panel-heading  text-center">
+                        <h3>Цена</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p class="lead" style="font-size:40px"><strong><%= @paper.price %> &#8381;</strong></p>
+                        <a class="btn btn-lg btn-block btn-danger" href="#">Заказать</a>
+                    </div>
+                    <em>Стоимость почтовой пересылки оплачивается отдельно. Полная цена заказа определяется при оформлении заказа</em>
+                </div>
+            <% else %>
+                <div class="panel price panel-white">
+                    <div class="panel-body text-center">
+                        <p class="lead" style="font-size:40px"><strong>Бесплатно</strong></p>
+                        <a class="btn btn-lg btn-block btn-danger" href="#">Скачать</a>
+                    </div>
+                </div>
+            <% end %>
+            <!-- /PRICE ITEM -->
+
+            <!-- <dl>
+            <dt>Формат:</dt><dd><%= @paper.format %></dd>
+            <dt>Объем:</dt><dd><%= @paper.volume %></dd>
+            <dt>Тип:</dt><dd><%= @paper.paper_type %></dd>
+            <dt>Жанр:</dt><dd><%= @paper.genre %></dd>
+            <dt>Обложка:</dt><dd><%= @paper.cover %></dd>
+            <dt>Издательство:</dt><dd><%= @paper.publisher %></dd>
+            <dt>Типография:</dt><dd><%= @paper.printing %></dd>
+            <dt>Тираж:</dt><dd><%= @paper.circulation %></dd>
+            <dt>Цена:</dt><dd><%= @paper.price %></dd>
+            </dl>
+            <em>Стоимость почтовой пересылки оплачивается отдельно. Полная цена заказа определяется при оформлении заказа</em>
+            -->
             <!-- Comments Form -->
             <!-- <div class="card my-4">
                  <h5 class="card-header">Leave a Comment:</h5>
